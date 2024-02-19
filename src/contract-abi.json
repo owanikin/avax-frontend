@@ -113,6 +113,11 @@
 	{
 		"inputs": [
 			{
+				"internalType": "string",
+				"name": "_purpose",
+				"type": "string"
+			},
+			{
 				"internalType": "uint256",
 				"name": "targetAmount",
 				"type": "uint256"
@@ -121,6 +126,25 @@
 		"name": "startFund",
 		"outputs": [],
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "activeFundKeys",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -157,6 +181,56 @@
 				"internalType": "uint256",
 				"name": "matchingPool",
 				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "purpose",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getActiveFunds",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "fundOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "targetAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountRaised",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "matchingPool",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "purpose",
+						"type": "string"
+					}
+				],
+				"internalType": "struct Crowdfunding.Fund[]",
+				"name": "activeFundsList",
+				"type": "tuple[]"
 			}
 		],
 		"stateMutability": "view",

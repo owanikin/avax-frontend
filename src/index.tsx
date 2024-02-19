@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { AuthType } from '@particle-network/auth-core';
-import { Avalanche } from '@particle-network/chains';
+import { AvalancheTestnet } from '@particle-network/chains';
 import { AuthCoreContextProvider, PromptSettingType } from '@particle-network/auth-core-modal'
 import './index.css';
 import App from './App';
@@ -21,10 +21,10 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         themeType: 'dark',
         fiatCoin: 'USD',
         language: 'en',
-        erc4337: {
-          name: 'SIMPLE',
-          version: '1.0.0',
-        },
+        // erc4337: {
+        //   name: 'SIMPLE',
+        //   version: '1.0.0',
+        // },
         promptSettingConfig: {
           promptPaymentPasswordSettingWhenSign: PromptSettingType.first,
           promptMasterPasswordSettingWhenLogin: PromptSettingType.first,
@@ -32,7 +32,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         wallet: {
           visible: true,
           customStyle: {
-            supportChains: [Avalanche],
+            supportChains: [AvalancheTestnet],
           }
         },
       }}
